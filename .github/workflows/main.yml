@@ -6,6 +6,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    container: node:16-alpine
     steps:
       - name: Build the dev docker files
         run: docker build -t adithyasekar/docker-react -f Dockerfile.dev .
